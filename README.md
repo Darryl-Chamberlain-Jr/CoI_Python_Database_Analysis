@@ -29,6 +29,7 @@ We use the following naming convention for saving Word files: <br>
 *CLASS_ID* *TERM* *YEAR* - SECTION *#* - M*#* Transcript.csv <br> 
 Example: MATH111 AUG 2021 - SECTION 2 - M1 Transcript.csv<br>
 **CAUTION: Sometimes there is a conversion problem. I do not know how to resolve this. But this works 95\% of the time.**<br>
+**Be sure to remove all hyperlinks. This can be accomplished on Mac by pressing FN+Command+Shift+F9.**
 3. **Open a Terminal in the folder and run *python3 GUI_deidentification.py*.**
 
 
