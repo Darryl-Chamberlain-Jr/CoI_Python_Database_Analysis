@@ -1,0 +1,15 @@
+digraph G {
+	overlap=scale splines=true
+	edge [fontsize=12]
+	node [fillcolor="#cae6df" shape=circle style=filled]
+	grades [label=grades]
+	node [shape=box style=""]
+	Discussion_Score [label=Discussion_Score]
+	Total_Course_Score [label=Total_Course_Score]
+	ethnicity [label=ethnicity]
+	gpa_group [label=gpa_group]
+	grades -> Total_Course_Score [label=""]
+	grades -> Discussion_Score [label=""]
+	grades -> gpa_group [label=""]
+	grades -> ethnicity [label=""]
+}

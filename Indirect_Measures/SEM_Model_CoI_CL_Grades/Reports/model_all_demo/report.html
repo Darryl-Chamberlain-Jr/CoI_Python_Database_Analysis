@@ -1,0 +1,1155 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Georgy Meshcheryakov">
+    <title>/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_all_demo: Report</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/semopy.css" rel="stylesheet">
+    <script src="./js/bootstrap.min.js"></script>
+    <style>nav .nav-link {
+    color: black;
+}
+nav .nav-link:hover {
+    color: grey;
+}
+nav .nav-link.active {
+    color: grey;
+}</style>
+
+
+  </head>
+  <body>
+<br><br>
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-sm-8">
+	<h2 style="display:inline">Report: /Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_all_demo</h2>
+	</div>
+</div>
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col-sm-2">
+     <br>
+     <div class="sticky-top">
+      <nav class="nav flex-column" >
+        <a class="p-1 nav-link active" id="model_m" href="#model">Model information</a>
+        <a class="p-1 nav-link" id="estimates_m" href="#estimates">Estimates</a>
+        <a class="p-1 nav-link" id="indices_m" href="#indices">Fit indices</a>
+	<a class="p-1 nav-link" id="matrices_m" href="#matrices">Matrices</a>
+      </nav>
+     </div>
+    </div>
+    <div class="col-sm-9" style="border-left: 1px solid">
+     <br>
+	<a class="anchor" id="model"></a>
+	<h3>Model information</h3>
+		<div class="row">
+		<div class="col-sm-4">Model class:</div><div class="col-sm-2"><span style="background-color: #f6f8fa; font-family: monospace;">Model</span></div>
+		</div>
+		<div class="row">
+		<div class="col-sm-4">Number of samples:</div><div class="col-sm-2">250</div>
+		</div>
+		<div class="row">
+		<div class="col-sm-4">Objective function:</div><div class="col-sm-2">MLW</div>
+		</div>
+		<div class="row">
+		<div class="col-sm-4">Converged:</div><div class="col-sm-2 text-success">Yes</div>
+		</div>
+		<br>
+		Description in <b>semopy</b> syntax:
+		<div class="col-sm-9" style="background-color: #f6f8fa;max-width: 100%;width: 100%;border: 1px solid">
+		<pre style="font-family: monospace">
+demographics =~ gender + age_group + ethnicity + gpa_group + major + employment_group 
+course_grades =~ Discussion_Score + Total_Course_Score
+grades =~ demographics + course_grades
+</pre>
+		</div>
+		<br>
+		<div class="accordion" id="accordion1">
+		<div class="accordion-item">
+	    <h2 class="accordion-header" id="headingOne">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+		Variables classification
+	      </button>
+	    </h2>
+	    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion1">
+	      <div class="accordion-body">
+		<div class="row"><div class="col-sm-2">all</div><div class="col-sm-6">age_group, Discussion_Score, grades, demographics, major, employment_group, ethnicity, gpa_group, gender, course_grades, Total_Course_Score</div></div><div class="row"><div class="col-sm-2">endogenous</div><div class="col-sm-6">age_group, Discussion_Score, demographics, major, employment_group, ethnicity, gpa_group, gender, course_grades, Total_Course_Score</div></div><div class="row"><div class="col-sm-2">exogenous</div><div class="col-sm-6">grades</div></div><div class="row"><div class="col-sm-2">observed</div><div class="col-sm-6">Discussion_Score, Total_Course_Score, age_group, employment_group, ethnicity, gender, gpa_group, major</div></div><div class="row"><div class="col-sm-2">latent</div><div class="col-sm-6">course_grades, grades, demographics</div></div><div class="row"><div class="col-sm-2">indicator</div><div class="col-sm-6">age_group, Discussion_Score, demographics, major, employment_group, ethnicity, gpa_group, gender, course_grades, Total_Course_Score</div></div><div class="row"><div class="col-sm-2">output</div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-2">_output</div><div class="col-sm-6">age_group, Discussion_Score, major, employment_group, ethnicity, gpa_group, gender, Total_Course_Score</div></div><div class="row"><div class="col-sm-2">inner</div><div class="col-sm-6">course_grades, demographics, grades</div></div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<br>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+		  <li class="nav-item" role="presentation">
+		    <button class="nav-link active" id="plainfig-tab" data-bs-toggle="tab" data-bs-target="#plainfig" type="button" role="tab" aria-controls="plainfig" aria-selected="true">Omit covariances and estimates</button>
+		  </li>
+		  <li class="nav-item" role="presentation">
+		    <button class="nav-link" id="covfig-tab" data-bs-toggle="tab" data-bs-target="#covfig" type="button" role="tab" aria-controls="covfig" aria-selected="false">Omit covariances</button>
+		  </li>
+		  <li class="nav-item" role="presentation">
+		    <button class="nav-link" id="plainparamfig-tab" data-bs-toggle="tab" data-bs-target="#plainparamfig" type="button" role="tab" aria-controls="plainparamfig" aria-selected="false">Omit estimates</button>
+		  </li>
+		<li class="nav-item" role="presentation">
+		    <button class="nav-link" id="covparamfig-tab" data-bs-toggle="tab" data-bs-target="#covparamfig" type="button" role="tab" aria-controls="covparamfig" aria-selected="false">Show estimates and covariances</button>
+		  </li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+		  <div class="tab-pane fade show active" id="plainfig" role="tabpanel" aria-labelledby="plainfig-tab"><img src="./plots/1.png" class="img-fluid" alt="Model figure with covariances and estimates omitted"></div>
+		  <div class="tab-pane fade" id="covfig" role="tabpanel" aria-labelledby="covfig-tab"><img src="./plots/2.png" class="img-fluid" alt="Model figure with covariances omitted"></div>
+		  <div class="tab-pane fade" id="plainparamfig" role="tabpanel" aria-labelledby="plainparamfig-tab"><img src="./plots/3.png" class="img-fluid" alt="Model figure with estimates omitted"></div>
+		 <div class="tab-pane fade" id="covparamfig" role="tabpanel" aria-labelledby="covparamfig-tab"><img src="./plots/4.png" class="img-fluid" alt="Model figure"></div>
+		</div>
+		
+	<a class="anchor" id="estimates"></a>
+	<h3>Estimates</h3>
+	<div style="font-family:monospace">
+	<div class="row"><div class='col-sm-2'></div><div class='col-sm-2'></div><div class='col-sm-1'>Estimate</div><div class='col-sm-1'>P-value</div></div><div class='col-sm-2'>Measurement:</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div><div class="row"><div class='col-sm-2 text-end'>demographics =~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>gender</div><div class='col-sm-1'>1.000</div><div class='col-sm-1'>-</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>age_group</div><div class='col-sm-1'>-28.579</div><div class='col-sm-1'>0.888</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>ethnicity</div><div class='col-sm-1'>116.558</div><div class='col-sm-1'>0.888</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>gpa_group</div><div class='col-sm-1'>173.851</div><div class='col-sm-1'>0.888</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>major</div><div class='col-sm-1'>-24.933</div><div class='col-sm-1'>0.894</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>employment_group</div><div class='col-sm-1'>-22.514</div><div class='col-sm-1'>0.888</div></div><div class="row"><div class='col-sm-2 text-end'>course_grades =~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>Discussion_Score</div><div class='col-sm-1'>1.000</div><div class='col-sm-1'>-</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>Total_Course_Score</div><div class='col-sm-1'>1.007</div><div class='col-sm-1'>0.000</div></div><div class='col-sm-2'>Regressions:</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div><div class="row"><div class='col-sm-2 text-end'>demographics ~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>grades</div><div class='col-sm-1'>1.000</div><div class='col-sm-1'>-</div></div><div class="row"><div class='col-sm-2 text-end'>course_grades ~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>grades</div><div class='col-sm-1'>203.780</div><div class='col-sm-1'>1.000</div></div><div class='col-sm-2'>Variances:</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>course_grades</div><div class='col-sm-1'>0.225</div><div class='col-sm-1'>1.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>demographics</div><div class='col-sm-1'>0.000</div><div class='col-sm-1'>1.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>grades</div><div class='col-sm-1'>0.000</div><div class='col-sm-1'>1.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>Discussion_Score</div><div class='col-sm-1'>0.451</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>Total_Course_Score</div><div class='col-sm-1'>0.408</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>age_group</div><div class='col-sm-1'>1.050</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>employment_group</div><div class='col-sm-1'>0.457</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>ethnicity</div><div class='col-sm-1'>2.271</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>gender</div><div class='col-sm-1'>0.129</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>gpa_group</div><div class='col-sm-1'>0.126</div><div class='col-sm-1'>0.287</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>major</div><div class='col-sm-1'>9.693</div><div class='col-sm-1'>0.000</div></div>
+	</div>
+	<br>
+	<div class="accordion" id="accordion3">
+	<div class="accordion-item">
+	    <h2 class="accordion-header" id="headingThree">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		semopy tabular output
+	      </button>
+	    </h2>	
+	    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion3">
+	      <div class="accordion-body" style="background-color: #f6f8fa;max-width: 100%;width: 100%">
+		<pre style="font-family: monospace">                  lval  op                rval    Estimate           Std. Err   
+0         demographics   ~              grades    1.000000                  -  \
+1        course_grades   ~              grades  203.780423  1146442211.050173   
+2               gender   ~        demographics    1.000000                  -   
+3            age_group   ~        demographics  -28.578637         203.534594   
+4            ethnicity   ~        demographics  116.558150         826.545704   
+5            gpa_group   ~        demographics  173.850706        1232.816687   
+6                major   ~        demographics  -24.933059         187.068342   
+7     employment_group   ~        demographics  -22.514239         160.107802   
+8     Discussion_Score   ~       course_grades    1.000000                  -   
+9   Total_Course_Score   ~       course_grades    1.007487           0.128551   
+10       course_grades  ~~       course_grades    0.225224     2169997.642757   
+11        demographics  ~~        demographics    0.000004          52.255781   
+12              grades  ~~              grades    0.000009          52.255781   
+13    Discussion_Score  ~~    Discussion_Score    0.451326           0.079665   
+14  Total_Course_Score  ~~  Total_Course_Score    0.408453           0.078705   
+15           age_group  ~~           age_group    1.050095           0.094206   
+16    employment_group  ~~    employment_group    0.456948           0.041053   
+17           ethnicity  ~~           ethnicity    2.271469           0.210978   
+18              gender  ~~              gender    0.128971           0.011536   
+19           gpa_group  ~~           gpa_group    0.126395           0.118598   
+20               major  ~~               major    9.692856           0.867152   
+
+      z-value   p-value  
+0           -         -  
+1         0.0       1.0  
+2           -         -  
+3   -0.140412  0.888335  
+4    0.141018  0.887855  
+5    0.141019  0.887855  
+6   -0.133283  0.893969  
+7   -0.140619  0.888171  
+8           -         -  
+9    7.837239       0.0  
+10        0.0       1.0  
+11        0.0       1.0  
+12        0.0       1.0  
+13   5.665316       0.0  
+14   5.189687       0.0  
+15  11.146826       0.0  
+16  11.130679       0.0  
+17  10.766365       0.0  
+18  11.180036       0.0  
+19   1.065745  0.286539  
+20  11.177808       0.0  </pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<br>
+	<div class="accordion" id="accordion2">
+	<div class="accordion-item">
+	    <h2 class="accordion-header" id="headingTwo">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		Optimizer report
+	      </button>
+	    </h2>	
+	    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion2">
+	      <div class="accordion-body" style="background-color: #f6f8fa;max-width: 100%;width: 100%">
+		<pre style="font-family: monospace">Name of objective: MLW
+Optimization method: SLSQP
+Optimization successful.
+Optimization terminated successfully
+Objective value: 0.227
+Number of iterations: 168
+Params: -28.579 116.558 173.851 -24.933 -22.514 1.007 203.780 0.451 0.408 1.050 0.225 0.000 0.457 2.271 0.129 0.126 0.000 9.693</pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<a class="anchor" id="indices"></a>
+	<h3>Fit indices</h3>
+	<table class="table"><thead><tr><th scope='col'>DoF</th><th scope='col'>DoF Baseline</th><th scope='col'>chi2</th><th scope='col'>chi2 p-value</th><th scope='col'>chi2 Baseline</th></tr></thead><tbody><tr><td>18.000</td><td>28.000</td><td>56.658</td><td>0.000</td><td>255.544</td></tr></tbody></table><table class="table"><thead><tr><th scope='col'>CFI</th><th scope='col'>GFI</th><th scope='col'>AGFI</th><th scope='col'>NFI</th><th scope='col'>TLI</th></tr></thead><tbody><tr><td>0.830</td><td>0.778</td><td>0.655</td><td>0.778</td><td>0.736</td></tr></tbody></table><table class="table"><thead><tr><th scope='col'>RMSEA</th><th scope='col'>AIC</th><th scope='col'>BIC</th><th scope='col'>LogLik</th></tr></thead><tbody><tr><td>0.093</td><td>35.547</td><td>98.933</td><td>0.227</td></tr></tbody></table>
+	<a class="anchor" id="matrices"></a>
+	<h3>Matrices</h3>
+ 	<center><h4>Covariance matrix</h4></center>
+<ul class="nav nav-tabs" id="cov" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="sample-tab" data-bs-toggle="tab" data-bs-target="#sample"
+type="button" role="tab" aria-controls="sample" aria-selected="true">Sample</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="modelimplied-tab" data-bs-toggle="tab" data-bs-target="#modelimplied"
+type="button" role="tab" aria-controls="modelimplied" aria-selected="false">Model-implied</button>
+</li></ul><div class="tab-content" id="covContent"><div class="tab-pane fade show active" id="sample" role="tabpanel" aria-labelledby="sample-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Discussion_Score</th>
+      <th>Total_Course_Score</th>
+      <th>age_group</th>
+      <th>employment_group</th>
+      <th>ethnicity</th>
+      <th>gender</th>
+      <th>gpa_group</th>
+      <th>major</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Discussion_Score</th>
+      <td>1.06</td>
+      <td>0.62</td>
+      <td>0.05</td>
+      <td>-0.05</td>
+      <td>0.09</td>
+      <td>-0.01</td>
+      <td>0.34</td>
+      <td>-0.31</td>
+    </tr>
+    <tr>
+      <th>Total_Course_Score</th>
+      <td>0.62</td>
+      <td>1.03</td>
+      <td>-0.19</td>
+      <td>-0.07</td>
+      <td>0.24</td>
+      <td>-0.00</td>
+      <td>0.33</td>
+      <td>-0.46</td>
+    </tr>
+    <tr>
+      <th>age_group</th>
+      <td>0.05</td>
+      <td>-0.19</td>
+      <td>1.06</td>
+      <td>0.12</td>
+      <td>0.10</td>
+      <td>-0.06</td>
+      <td>-0.07</td>
+      <td>0.20</td>
+    </tr>
+    <tr>
+      <th>employment_group</th>
+      <td>-0.05</td>
+      <td>-0.07</td>
+      <td>0.12</td>
+      <td>0.46</td>
+      <td>-0.10</td>
+      <td>-0.05</td>
+      <td>-0.04</td>
+      <td>-0.15</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.09</td>
+      <td>0.24</td>
+      <td>0.10</td>
+      <td>-0.10</td>
+      <td>2.44</td>
+      <td>-0.03</td>
+      <td>0.27</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <td>-0.01</td>
+      <td>-0.00</td>
+      <td>-0.06</td>
+      <td>-0.05</td>
+      <td>-0.03</td>
+      <td>0.13</td>
+      <td>-0.01</td>
+      <td>0.02</td>
+    </tr>
+    <tr>
+      <th>gpa_group</th>
+      <td>0.34</td>
+      <td>0.33</td>
+      <td>-0.07</td>
+      <td>-0.04</td>
+      <td>0.27</td>
+      <td>-0.01</td>
+      <td>0.52</td>
+      <td>-0.10</td>
+    </tr>
+    <tr>
+      <th>major</th>
+      <td>-0.31</td>
+      <td>-0.46</td>
+      <td>0.20</td>
+      <td>-0.15</td>
+      <td>0.09</td>
+      <td>0.02</td>
+      <td>-0.10</td>
+      <td>9.72</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="modelimplied" role="tabpanel" aria-labelledby="modelimplied-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Discussion_Score</th>
+      <th>Total_Course_Score</th>
+      <th>age_group</th>
+      <th>employment_group</th>
+      <th>ethnicity</th>
+      <th>gender</th>
+      <th>gpa_group</th>
+      <th>major</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Discussion_Score</th>
+      <td>1.06</td>
+      <td>0.62</td>
+      <td>-0.05</td>
+      <td>-0.04</td>
+      <td>0.22</td>
+      <td>0.00</td>
+      <td>0.33</td>
+      <td>-0.05</td>
+    </tr>
+    <tr>
+      <th>Total_Course_Score</th>
+      <td>0.62</td>
+      <td>1.03</td>
+      <td>-0.05</td>
+      <td>-0.04</td>
+      <td>0.22</td>
+      <td>0.00</td>
+      <td>0.33</td>
+      <td>-0.05</td>
+    </tr>
+    <tr>
+      <th>age_group</th>
+      <td>-0.05</td>
+      <td>-0.05</td>
+      <td>1.06</td>
+      <td>0.01</td>
+      <td>-0.04</td>
+      <td>-0.00</td>
+      <td>-0.06</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>employment_group</th>
+      <td>-0.04</td>
+      <td>-0.04</td>
+      <td>0.01</td>
+      <td>0.46</td>
+      <td>-0.03</td>
+      <td>-0.00</td>
+      <td>-0.05</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.22</td>
+      <td>0.22</td>
+      <td>-0.04</td>
+      <td>-0.03</td>
+      <td>2.45</td>
+      <td>0.00</td>
+      <td>0.26</td>
+      <td>-0.04</td>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>-0.00</td>
+      <td>-0.00</td>
+      <td>0.00</td>
+      <td>0.13</td>
+      <td>0.00</td>
+      <td>-0.00</td>
+    </tr>
+    <tr>
+      <th>gpa_group</th>
+      <td>0.33</td>
+      <td>0.33</td>
+      <td>-0.06</td>
+      <td>-0.05</td>
+      <td>0.26</td>
+      <td>0.00</td>
+      <td>0.52</td>
+      <td>-0.06</td>
+    </tr>
+    <tr>
+      <th>major</th>
+      <td>-0.05</td>
+      <td>-0.05</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>-0.04</td>
+      <td>-0.00</td>
+      <td>-0.06</td>
+      <td>9.70</td>
+    </tr>
+  </tbody>
+</table></div></div><br><center><h4>Model matrices</h4></center><ul class="nav nav-tabs" id="modelmatrices" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="mxBeta-tab" data-bs-toggle="tab" data-bs-target="#mxBeta"
+type="button" role="tab" aria-controls="mxBeta" aria-selected="true">Beta</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="mxLambda-tab" data-bs-toggle="tab" data-bs-target="#mxLambda"
+type="button" role="tab" aria-controls="mxLambda" aria-selected="false">Lambda</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="mxPsi-tab" data-bs-toggle="tab" data-bs-target="#mxPsi"
+type="button" role="tab" aria-controls="mxPsi" aria-selected="false">Psi</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="mxTheta-tab" data-bs-toggle="tab" data-bs-target="#mxTheta"
+type="button" role="tab" aria-controls="mxTheta" aria-selected="false">Theta</button>
+</li></ul><div class="tab-content" id="covContent"><div class="tab-pane fade show active" id="mxBeta" role="tabpanel" aria-labelledby="mxBeta-tab"><ul class="nav nav-tabs" id="Betasub" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="BetaEstimates-tab" data-bs-toggle="tab" data-bs-target="#BetaEstimates"
+type="button" role="tab" aria-controls="BetaEstimates" aria-selected="true">Estimates</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="BetaStart-tab" data-bs-toggle="tab" data-bs-target="#BetaStart"
+type="button" role="tab" aria-controls="BetaStart" aria-selected="false">Start</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="BetaNames-tab" data-bs-toggle="tab" data-bs-target="#BetaNames"
+type="button" role="tab" aria-controls="BetaNames" aria-selected="false">Names</button>
+</li></ul><div class="tab-content" id="/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_all_demosubContent"><div class="tab-pane fade show active" id="BetaEstimates" role="tabpanel" aria-labelledby="BetaEstimates-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>course_grades</th>
+      <th>demographics</th>
+      <th>grades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>course_grades</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>203.78</td>
+    </tr>
+    <tr>
+      <th>demographics</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th>grades</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="BetaStart" role="tabpanel" aria-labelledby="BetaStart-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>course_grades</th>
+      <th>demographics</th>
+      <th>grades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>course_grades</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>demographics</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th>grades</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="BetaNames" role="tabpanel" aria-labelledby="BetaNames-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>course_grades</th>
+      <th>demographics</th>
+      <th>grades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>course_grades</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_b10</td>
+    </tr>
+    <tr>
+      <th>demographics</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_b9</td>
+    </tr>
+    <tr>
+      <th>grades</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div></div></div><div class="tab-pane fade " id="mxLambda" role="tabpanel" aria-labelledby="mxLambda-tab"><ul class="nav nav-tabs" id="Lambdasub" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="LambdaEstimates-tab" data-bs-toggle="tab" data-bs-target="#LambdaEstimates"
+type="button" role="tab" aria-controls="LambdaEstimates" aria-selected="true">Estimates</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="LambdaStart-tab" data-bs-toggle="tab" data-bs-target="#LambdaStart"
+type="button" role="tab" aria-controls="LambdaStart" aria-selected="false">Start</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="LambdaNames-tab" data-bs-toggle="tab" data-bs-target="#LambdaNames"
+type="button" role="tab" aria-controls="LambdaNames" aria-selected="false">Names</button>
+</li></ul><div class="tab-content" id="/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_all_demosubContent"><div class="tab-pane fade show active" id="LambdaEstimates" role="tabpanel" aria-labelledby="LambdaEstimates-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>course_grades</th>
+      <th>demographics</th>
+      <th>grades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Discussion_Score</th>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Total_Course_Score</th>
+      <td>1.01</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>age_group</th>
+      <td>0.00</td>
+      <td>-28.58</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>employment_group</th>
+      <td>0.00</td>
+      <td>-22.51</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.00</td>
+      <td>116.56</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gpa_group</th>
+      <td>0.00</td>
+      <td>173.85</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>major</th>
+      <td>0.00</td>
+      <td>-24.93</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="LambdaStart" role="tabpanel" aria-labelledby="LambdaStart-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>course_grades</th>
+      <th>demographics</th>
+      <th>grades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Discussion_Score</th>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Total_Course_Score</th>
+      <td>0.58</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>age_group</th>
+      <td>0.00</td>
+      <td>-0.49</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>employment_group</th>
+      <td>0.00</td>
+      <td>-0.36</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.00</td>
+      <td>-0.25</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gpa_group</th>
+      <td>0.00</td>
+      <td>-0.07</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>major</th>
+      <td>0.00</td>
+      <td>0.18</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="LambdaNames" role="tabpanel" aria-labelledby="LambdaNames-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>course_grades</th>
+      <th>demographics</th>
+      <th>grades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Discussion_Score</th>
+      <td>_b7</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Total_Course_Score</th>
+      <td>_b8</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>age_group</th>
+      <td>0.00</td>
+      <td>_b2</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>employment_group</th>
+      <td>0.00</td>
+      <td>_b6</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.00</td>
+      <td>_b3</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <td>0.00</td>
+      <td>_b1</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gpa_group</th>
+      <td>0.00</td>
+      <td>_b4</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>major</th>
+      <td>0.00</td>
+      <td>_b5</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div></div></div><div class="tab-pane fade " id="mxPsi" role="tabpanel" aria-labelledby="mxPsi-tab"><ul class="nav nav-tabs" id="Psisub" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="PsiEstimates-tab" data-bs-toggle="tab" data-bs-target="#PsiEstimates"
+type="button" role="tab" aria-controls="PsiEstimates" aria-selected="true">Estimates</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="PsiStart-tab" data-bs-toggle="tab" data-bs-target="#PsiStart"
+type="button" role="tab" aria-controls="PsiStart" aria-selected="false">Start</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="PsiNames-tab" data-bs-toggle="tab" data-bs-target="#PsiNames"
+type="button" role="tab" aria-controls="PsiNames" aria-selected="false">Names</button>
+</li></ul><div class="tab-content" id="/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_all_demosubContent"><div class="tab-pane fade show active" id="PsiEstimates" role="tabpanel" aria-labelledby="PsiEstimates-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>course_grades</th>
+      <th>demographics</th>
+      <th>grades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>course_grades</th>
+      <td>0.23</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>demographics</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>grades</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="PsiStart" role="tabpanel" aria-labelledby="PsiStart-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>course_grades</th>
+      <th>demographics</th>
+      <th>grades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>course_grades</th>
+      <td>0.05</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>demographics</th>
+      <td>0.00</td>
+      <td>0.05</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>grades</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.05</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="PsiNames" role="tabpanel" aria-labelledby="PsiNames-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>course_grades</th>
+      <th>demographics</th>
+      <th>grades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>course_grades</th>
+      <td>_c4</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>demographics</th>
+      <td>0.00</td>
+      <td>_c5</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>grades</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c10</td>
+    </tr>
+  </tbody>
+</table></div></div></div><div class="tab-pane fade " id="mxTheta" role="tabpanel" aria-labelledby="mxTheta-tab"><ul class="nav nav-tabs" id="Thetasub" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="ThetaEstimates-tab" data-bs-toggle="tab" data-bs-target="#ThetaEstimates"
+type="button" role="tab" aria-controls="ThetaEstimates" aria-selected="true">Estimates</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="ThetaStart-tab" data-bs-toggle="tab" data-bs-target="#ThetaStart"
+type="button" role="tab" aria-controls="ThetaStart" aria-selected="false">Start</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="ThetaNames-tab" data-bs-toggle="tab" data-bs-target="#ThetaNames"
+type="button" role="tab" aria-controls="ThetaNames" aria-selected="false">Names</button>
+</li></ul><div class="tab-content" id="/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_all_demosubContent"><div class="tab-pane fade show active" id="ThetaEstimates" role="tabpanel" aria-labelledby="ThetaEstimates-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Discussion_Score</th>
+      <th>Total_Course_Score</th>
+      <th>age_group</th>
+      <th>employment_group</th>
+      <th>ethnicity</th>
+      <th>gender</th>
+      <th>gpa_group</th>
+      <th>major</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Discussion_Score</th>
+      <td>0.45</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Total_Course_Score</th>
+      <td>0.00</td>
+      <td>0.41</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>age_group</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.05</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>employment_group</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.46</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>2.27</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.13</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gpa_group</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.13</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>major</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>9.69</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="ThetaStart" role="tabpanel" aria-labelledby="ThetaStart-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Discussion_Score</th>
+      <th>Total_Course_Score</th>
+      <th>age_group</th>
+      <th>employment_group</th>
+      <th>ethnicity</th>
+      <th>gender</th>
+      <th>gpa_group</th>
+      <th>major</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Discussion_Score</th>
+      <td>0.53</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Total_Course_Score</th>
+      <td>0.00</td>
+      <td>0.51</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>age_group</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.53</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>employment_group</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.23</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.22</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.06</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gpa_group</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.26</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>major</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>4.86</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="ThetaNames" role="tabpanel" aria-labelledby="ThetaNames-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Discussion_Score</th>
+      <th>Total_Course_Score</th>
+      <th>age_group</th>
+      <th>employment_group</th>
+      <th>ethnicity</th>
+      <th>gender</th>
+      <th>gpa_group</th>
+      <th>major</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Discussion_Score</th>
+      <td>_c1</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Total_Course_Score</th>
+      <td>0.00</td>
+      <td>_c2</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>age_group</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c3</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>employment_group</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c6</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c7</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c8</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>gpa_group</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c9</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>major</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c11</td>
+    </tr>
+  </tbody>
+</table></div></div></div></div>
+    </div>
+   </div>
+  </div>
+</div>
+<footer class="footer">
+      <div class="container">
+	<br>
+	<center>
+        <span class="text-muted">Generated by <a href="https://semopy.com"><b>semopy</b></a> v. 2.3.11.</span>
+	</center>
+      </div>
+    </footer>
+</body>
+<script>
+const menus = [document.getElementById("model_m"), document.getElementById("estimates_m"), document.getElementById("indices_m"), document.getElementById("matrices_m")];
+const headers = [document.getElementById("model"), document.getElementById("estimates"), document.getElementById("indices"), document.getElementById("matrices")];
+var cur = menus[0];
+cur.classList.add('active');
+window.addEventListener("scroll", function() {
+  headers.forEach(function(item, index, array) {
+    if (window.scrollY >= (item.offsetTop - 1.05 * item.offsetHeight)) {
+        item = menus[index];
+        cur.classList.remove("active");
+        cur = item;
+        cur.classList.add("active");
+  }
+});
+});
+</script>
+
+</html>

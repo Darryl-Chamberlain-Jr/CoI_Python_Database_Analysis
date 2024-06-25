@@ -1,0 +1,19 @@
+digraph G {
+	overlap=scale splines=true
+	rankdir="LR"
+	edge [fontsize=12]
+	node [fillcolor="#cae6df" shape=circle style=filled]
+	replying_to_posts [label=replying_to_posts]
+	reading_posts [label=reading_posts]
+	initial_post [label=initial_post]
+	integrate_feedback [label=integrate_feedback]
+	understanding_expectations [label=understanding_expectations]
+	node [shape=box style=""]
+	initial_post -> understanding_expectations [label="0.850\np-val: 0.00" dir=both style=dashed]
+	integrate_feedback -> understanding_expectations [label="0.386\np-val: 0.01" dir=both style=dashed]
+	reading_posts -> initial_post [label="0.297\np-val: 0.02" dir=both style=dashed]
+	replying_to_posts -> initial_post [label="0.503\np-val: 0.00" dir=both style=dashed]
+	replying_to_posts -> reading_posts [label="0.713\np-val: 0.00" dir=both style=dashed]
+	integrate_feedback -> reading_posts [label="0.426\np-val: 0.00" dir=both style=dashed]
+	integrate_feedback -> replying_to_posts [label="0.481\np-val: 0.00" dir=both style=dashed]
+}

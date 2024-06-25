@@ -2,46 +2,11 @@
 
  Analysis of Community of Inquiry data using Python
  
-Currently, there are two main python scripts to deidentify, clean, and restructure for analysis. 
-
-## GUI_deidentification.py
-The purpose of this script is to remove identifcation from students, clean files (e.g., remove excess lines from pdf -> word conversion), and put data in a csv file for later analysis. <br><br>
-
-To use this script, you will need to: 
-1. **Prepare the *Deident_Key.csv* for your data and place in the *Identifable_Data* folder.** <br>
-This file has 7 columns: <br>
--**Speaker:** True name of the person who said the sentence. <br>
--**Speaker ID:** Pseudonym of the person who said the sentence. <br>
--**Speaker Type:** Student or Instructor. Our analysis uses different codes for types of speakers and so we needed a column to sort this information. <br>
--**Class ID:** Course name. We currently are analyzing different courses and use MATH and PHY to denote these differences. <br>
--**Term:** Semester the course is run. ERAU runs new terms every month (terms overlap with others) and so our terms are classified by month. This could be FALL, SPRING, SUMMER for traditional universities. <br>
--**Year:** Year the course is run. <br>
--**Cohort:** Also known as the section for the course. For ease of reference, we have numbered our sections within each course. <br>
-*An example file can be found in the Identifable_Data folder.* <br>
-2. **Prepare the Word documents and place in the *Word_Documents_To_Deidentify* folder.** <br> 
-We use the following process to prepare our Word documents: <br>
--Open up the Canvas sections of the courses I want to pull transcripts from and navigate to the module discussion I want to pull.<br>
--Click the Chrome add-in button for [Print Friendly](https://www.printfriendly.com/).<br>
--Click “PDF” from the top menu bar, then click the green “download” button once it is done loading.<br>
--Open the PDF from its location using Adobe. <br>
--In Adobe, I click “File” –> “Export To” -> “Microsoft Word” -> “Word Document”. <br>
-We use the following naming convention for saving Word files: <br>
-*CLASS_ID* *TERM* *YEAR* - SECTION *#* - M*#* Transcript.csv <br> 
-Example: MATH111 AUG 2021 - SECTION 2 - M1 Transcript.csv<br>
-**CAUTION: Sometimes there is a conversion problem. I do not know how to resolve this. But this works 95\% of the time.**<br>
-**Be sure to remove all hyperlinks. This can be accomplished on Mac by pressing FN+Command+Shift+F9.**
-3. **Open a Terminal in the folder and run *python3 GUI_deidentification.py*.**
-
-
-## GUI_master_files.py
-The purpose of this script is to collect the deidentified csv files into a single repository/csv file. <br><br>
-
-To use this script, you will need to **open a Terminal in the folder and run *python3 GUI_master_files.py*.**
-
-Follow the on-screen instructions to either: <br>
-1. Upload all csv files to a master database. <br>
-2. Download master database as a csv file. <br>
-3. Delete old master database in preparation for a new one.<br>
-
-## Future Steps
-Analyzing data quantitatively by calling a loaded database. 
+ ## Direct Measures
+ To measure Community of Inquiry presences in discussions, data from online discussions on Canvas were collected. See "For_GUI_deidentification" for scripts on cleaning html sentences pulled using Canvas API. 
+ 
+## Indirect Measures
+Surveys were used to indirectly measure Community of Inquiry and Cognitive Load in online discussions. 
+- Analyze_Data contains correlation matrices and instructional efficiency estimates. 
+- SEM_Model_Attitudes contains SEM models for STEM Attitudes, Identity, and Ambition. 
+- SEM_Model_CoI_CL_Grades contains SEM models for Community of Inquiry, Cognitive Load, and Grades.

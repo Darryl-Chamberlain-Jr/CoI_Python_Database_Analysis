@@ -1,0 +1,2335 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Georgy Meshcheryakov">
+    <title>/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_Special: Report</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/semopy.css" rel="stylesheet">
+    <script src="./js/bootstrap.min.js"></script>
+    <style>nav .nav-link {
+    color: black;
+}
+nav .nav-link:hover {
+    color: grey;
+}
+nav .nav-link.active {
+    color: grey;
+}</style>
+
+
+  </head>
+  <body>
+<br><br>
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-sm-8">
+	<h2 style="display:inline">Report: /Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_Special</h2>
+	</div>
+</div>
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col-sm-2">
+     <br>
+     <div class="sticky-top">
+      <nav class="nav flex-column" >
+        <a class="p-1 nav-link active" id="model_m" href="#model">Model information</a>
+        <a class="p-1 nav-link" id="estimates_m" href="#estimates">Estimates</a>
+        <a class="p-1 nav-link" id="indices_m" href="#indices">Fit indices</a>
+	<a class="p-1 nav-link" id="matrices_m" href="#matrices">Matrices</a>
+      </nav>
+     </div>
+    </div>
+    <div class="col-sm-9" style="border-left: 1px solid">
+     <br>
+	<a class="anchor" id="model"></a>
+	<h3>Model information</h3>
+		<div class="row">
+		<div class="col-sm-4">Model class:</div><div class="col-sm-2"><span style="background-color: #f6f8fa; font-family: monospace;">Model</span></div>
+		</div>
+		<div class="row">
+		<div class="col-sm-4">Number of samples:</div><div class="col-sm-2">250</div>
+		</div>
+		<div class="row">
+		<div class="col-sm-4">Objective function:</div><div class="col-sm-2">MLW</div>
+		</div>
+		<div class="row">
+		<div class="col-sm-4">Converged:</div><div class="col-sm-2 text-success">Yes</div>
+		</div>
+		<br>
+		Description in <b>semopy</b> syntax:
+		<div class="col-sm-9" style="background-color: #f6f8fa;max-width: 100%;width: 100%;border: 1px solid">
+		<pre style="font-family: monospace">
+eta1 =~ cognitive_load + initial_post + replying_to_posts
+eta2 =~ teaching + cognitive + social + latent_tp2 + latent_tp3 + latent_tp1
+eta3 =~ social + cognitive + latent_cp2 + latent_sp1 + latent_sp2 + latent_cp1 + latent_tp1
+eta4 =~ initial_post + replying_to_posts
+eta5 =~ integrate_feedback + initial_post
+</pre>
+		</div>
+		<br>
+		<div class="accordion" id="accordion1">
+		<div class="accordion-item">
+	    <h2 class="accordion-header" id="headingOne">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+		Variables classification
+	      </button>
+	    </h2>
+	    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion1">
+	      <div class="accordion-body">
+		<div class="row"><div class="col-sm-2">all</div><div class="col-sm-6">eta4, latent_sp2, cognitive, latent_tp2, teaching, latent_tp3, cognitive_load, latent_cp1, latent_tp1, eta3, replying_to_posts, eta1, latent_sp1, latent_cp2, eta2, social, eta5, integrate_feedback, initial_post</div></div><div class="row"><div class="col-sm-2">endogenous</div><div class="col-sm-6">latent_cp1, latent_tp1, latent_sp2, replying_to_posts, cognitive, latent_tp2, teaching, latent_sp1, cognitive_load, initial_post, latent_cp2, social, integrate_feedback, latent_tp3</div></div><div class="row"><div class="col-sm-2">exogenous</div><div class="col-sm-6">eta4, eta3, eta1, eta2, eta5</div></div><div class="row"><div class="col-sm-2">observed</div><div class="col-sm-6">cognitive, cognitive_load, initial_post, integrate_feedback, latent_cp1, latent_cp2, latent_sp1, latent_sp2, latent_tp1, latent_tp2, latent_tp3, replying_to_posts, social, teaching</div></div><div class="row"><div class="col-sm-2">latent</div><div class="col-sm-6">eta4, eta3, eta1, eta2, eta5</div></div><div class="row"><div class="col-sm-2">indicator</div><div class="col-sm-6">latent_cp1, latent_tp1, latent_sp2, replying_to_posts, cognitive, latent_tp2, latent_tp3, teaching, latent_sp1, cognitive_load, latent_cp2, social, integrate_feedback, initial_post</div></div><div class="row"><div class="col-sm-2">output</div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-2">_output</div><div class="col-sm-6">latent_cp1, latent_tp1, latent_sp2, replying_to_posts, cognitive, latent_tp2, teaching, latent_sp1, cognitive_load, initial_post, latent_cp2, social, integrate_feedback, latent_tp3</div></div><div class="row"><div class="col-sm-2">inner</div><div class="col-sm-6">eta1, eta2, eta3, eta4, eta5</div></div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<br>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+		  <li class="nav-item" role="presentation">
+		    <button class="nav-link active" id="plainfig-tab" data-bs-toggle="tab" data-bs-target="#plainfig" type="button" role="tab" aria-controls="plainfig" aria-selected="true">Omit covariances and estimates</button>
+		  </li>
+		  <li class="nav-item" role="presentation">
+		    <button class="nav-link" id="covfig-tab" data-bs-toggle="tab" data-bs-target="#covfig" type="button" role="tab" aria-controls="covfig" aria-selected="false">Omit covariances</button>
+		  </li>
+		  <li class="nav-item" role="presentation">
+		    <button class="nav-link" id="plainparamfig-tab" data-bs-toggle="tab" data-bs-target="#plainparamfig" type="button" role="tab" aria-controls="plainparamfig" aria-selected="false">Omit estimates</button>
+		  </li>
+		<li class="nav-item" role="presentation">
+		    <button class="nav-link" id="covparamfig-tab" data-bs-toggle="tab" data-bs-target="#covparamfig" type="button" role="tab" aria-controls="covparamfig" aria-selected="false">Show estimates and covariances</button>
+		  </li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+		  <div class="tab-pane fade show active" id="plainfig" role="tabpanel" aria-labelledby="plainfig-tab"><img src="./plots/1.png" class="img-fluid" alt="Model figure with covariances and estimates omitted"></div>
+		  <div class="tab-pane fade" id="covfig" role="tabpanel" aria-labelledby="covfig-tab"><img src="./plots/2.png" class="img-fluid" alt="Model figure with covariances omitted"></div>
+		  <div class="tab-pane fade" id="plainparamfig" role="tabpanel" aria-labelledby="plainparamfig-tab"><img src="./plots/3.png" class="img-fluid" alt="Model figure with estimates omitted"></div>
+		 <div class="tab-pane fade" id="covparamfig" role="tabpanel" aria-labelledby="covparamfig-tab"><img src="./plots/4.png" class="img-fluid" alt="Model figure"></div>
+		</div>
+		
+	<a class="anchor" id="estimates"></a>
+	<h3>Estimates</h3>
+	<div style="font-family:monospace">
+	<div class="row"><div class='col-sm-2'></div><div class='col-sm-2'></div><div class='col-sm-1'>Estimate</div><div class='col-sm-1'>P-value</div></div><div class='col-sm-2'>Measurement:</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div><div class="row"><div class='col-sm-2 text-end'>eta1 =~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>cognitive_load</div><div class='col-sm-1'>1.000</div><div class='col-sm-1'>-</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>initial_post</div><div class='col-sm-1'>62.259</div><div class='col-sm-1'>0.960</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>replying_to_posts</div><div class='col-sm-1'>-0.045</div><div class='col-sm-1'>0.992</div></div><div class="row"><div class='col-sm-2 text-end'>eta4 =~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>initial_post</div><div class='col-sm-1'>1.000</div><div class='col-sm-1'>-</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>replying_to_posts</div><div class='col-sm-1'>2.635</div><div class='col-sm-1'>0.783</div></div><div class="row"><div class='col-sm-2 text-end'>eta5 =~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>initial_post</div><div class='col-sm-1'>-48.206</div><div class='col-sm-1'>0.960</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>integrate_feedback</div><div class='col-sm-1'>1.000</div><div class='col-sm-1'>-</div></div><div class="row"><div class='col-sm-2 text-end'>eta2 =~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>teaching</div><div class='col-sm-1'>1.000</div><div class='col-sm-1'>-</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>cognitive</div><div class='col-sm-1'>-0.480</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>social</div><div class='col-sm-1'>-0.158</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_tp2</div><div class='col-sm-1'>-0.228</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_tp3</div><div class='col-sm-1'>-0.084</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_tp1</div><div class='col-sm-1'>0.183</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'>eta3 =~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>cognitive</div><div class='col-sm-1'>2.711</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>social</div><div class='col-sm-1'>1.000</div><div class='col-sm-1'>-</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_tp1</div><div class='col-sm-1'>0.251</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_cp2</div><div class='col-sm-1'>0.699</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_sp1</div><div class='col-sm-1'>0.694</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_sp2</div><div class='col-sm-1'>0.281</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_cp1</div><div class='col-sm-1'>0.407</div><div class='col-sm-1'>0.000</div></div><div class='col-sm-2'>Variances:</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta1</div><div class='col-sm-1'>173.015</div><div class='col-sm-1'>0.491</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta2</div><div class='col-sm-1'>534.818</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta3</div><div class='col-sm-1'>38.565</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta4</div><div class='col-sm-1'>30.969</div><div class='col-sm-1'>0.932</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta5</div><div class='col-sm-1'>284.601</div><div class='col-sm-1'>0.150</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>cognitive</div><div class='col-sm-1'>0.000</div><div class='col-sm-1'>1.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>cognitive_load</div><div class='col-sm-1'>17982.908</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>initial_post</div><div class='col-sm-1'>63.924</div><div class='col-sm-1'>0.975</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>integrate_feedback</div><div class='col-sm-1'>476.489</div><div class='col-sm-1'>0.015</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_cp1</div><div class='col-sm-1'>1.550</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_cp2</div><div class='col-sm-1'>2.577</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_sp1</div><div class='col-sm-1'>9.934</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_sp2</div><div class='col-sm-1'>2.547</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_tp1</div><div class='col-sm-1'>26.534</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_tp2</div><div class='col-sm-1'>4.297</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>latent_tp3</div><div class='col-sm-1'>1.637</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>replying_to_posts</div><div class='col-sm-1'>175.750</div><div class='col-sm-1'>0.651</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>social</div><div class='col-sm-1'>15.003</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>teaching</div><div class='col-sm-1'>0.000</div><div class='col-sm-1'>1.000</div></div><div class="row"><div class='col-sm-2'>Covariances:</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'>eta1 ~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta2</div><div class='col-sm-1'>41.088</div><div class='col-sm-1'>0.247</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta5</div><div class='col-sm-1'>221.913</div><div class='col-sm-1'>0.346</div></div><div class="row"><div class='col-sm-2 text-end'>eta2 ~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta5</div><div class='col-sm-1'>52.757</div><div class='col-sm-1'>0.190</div></div><div class="row"><div class='col-sm-2 text-end'>eta3 ~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta1</div><div class='col-sm-1'>-16.665</div><div class='col-sm-1'>0.128</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta2</div><div class='col-sm-1'>-78.186</div><div class='col-sm-1'>0.000</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta5</div><div class='col-sm-1'>-21.498</div><div class='col-sm-1'>0.049</div></div><div class="row"><div class='col-sm-2 text-end'>eta4 ~</div><div class='col-sm-2'></div><div class='col-sm-1'></div><div class='col-sm-1'></div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta1</div><div class='col-sm-1'>150.101</div><div class='col-sm-1'>0.536</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta2</div><div class='col-sm-1'>11.049</div><div class='col-sm-1'>0.749</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta3</div><div class='col-sm-1'>-6.799</div><div class='col-sm-1'>0.238</div></div><div class="row"><div class='col-sm-2 text-end'></div><div class='col-sm-2'>eta5</div><div class='col-sm-1'>192.855</div><div class='col-sm-1'>0.529</div></div>
+	</div>
+	<br>
+	<div class="accordion" id="accordion3">
+	<div class="accordion-item">
+	    <h2 class="accordion-header" id="headingThree">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		semopy tabular output
+	      </button>
+	    </h2>	
+	    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion3">
+	      <div class="accordion-body" style="background-color: #f6f8fa;max-width: 100%;width: 100%">
+		<pre style="font-family: monospace">                  lval  op                rval      Estimate     Std. Err   
+0       cognitive_load   ~                eta1      1.000000            -  \
+1         initial_post   ~                eta1     62.258730  1236.905453   
+2         initial_post   ~                eta4      1.000000            -   
+3         initial_post   ~                eta5    -48.206271   962.644451   
+4    replying_to_posts   ~                eta1     -0.044621     4.663663   
+5    replying_to_posts   ~                eta4      2.634739     9.549807   
+6             teaching   ~                eta2      1.000000            -   
+7            cognitive   ~                eta2     -0.480402     0.015507   
+8            cognitive   ~                eta3      2.711143     0.129778   
+9               social   ~                eta2     -0.158096     0.013829   
+10              social   ~                eta3      1.000000            -   
+11          latent_tp2   ~                eta2     -0.228118     0.005837   
+12          latent_tp3   ~                eta2     -0.083982     0.003536   
+13          latent_tp1   ~                eta2      0.182926     0.016984   
+14          latent_tp1   ~                eta3      0.250664     0.064228   
+15          latent_cp2   ~                eta3      0.698648      0.03771   
+16          latent_sp1   ~                eta3      0.694453     0.046596   
+17          latent_sp2   ~                eta3      0.281474     0.021252   
+18          latent_cp1   ~                eta3      0.406568     0.023491   
+19  integrate_feedback   ~                eta5      1.000000            -   
+20                eta1  ~~                eta1    173.015354   251.411433   
+21                eta1  ~~                eta2     41.088165    35.510472   
+22                eta1  ~~                eta5    221.913399   235.518027   
+23                eta2  ~~                eta2    534.817550     47.94658   
+24                eta2  ~~                eta5     52.757319    40.292659   
+25                eta3  ~~                eta3     38.565301     5.099379   
+26                eta3  ~~                eta1    -16.664501     10.95617   
+27                eta3  ~~                eta2    -78.185632    11.348899   
+28                eta3  ~~                eta5    -21.498310    10.920603   
+29                eta4  ~~                eta4     30.969151     363.0176   
+30                eta4  ~~                eta1    150.100621   242.679231   
+31                eta4  ~~                eta2     11.048993    34.464598   
+32                eta4  ~~                eta3     -6.799148     5.756882   
+33                eta4  ~~                eta5    192.855484   306.228827   
+34                eta5  ~~                eta5    284.601194   197.754501   
+35           cognitive  ~~           cognitive      0.000000      1.82135   
+36      cognitive_load  ~~      cognitive_load  17982.908321  1612.148135   
+37        initial_post  ~~        initial_post     63.924339  2002.550748   
+38  integrate_feedback  ~~  integrate_feedback    476.489024   195.276988   
+39          latent_cp1  ~~          latent_cp1      1.550400     0.144105   
+40          latent_cp2  ~~          latent_cp2      2.577197     0.257939   
+41          latent_sp1  ~~          latent_sp1      9.933764     0.895832   
+42          latent_sp2  ~~          latent_sp2      2.547458     0.228625   
+43          latent_tp1  ~~          latent_tp1     26.534448     2.379002   
+44          latent_tp2  ~~          latent_tp2      4.297009     0.420138   
+45          latent_tp3  ~~          latent_tp3      1.636927     0.148207   
+46   replying_to_posts  ~~   replying_to_posts    175.749566   388.236309   
+47              social  ~~              social     15.003273     1.364554   
+48            teaching  ~~            teaching      0.000000     3.261292   
+
+      z-value   p-value  
+0           -         -  
+1    0.050334  0.959856  
+2           -         -  
+3   -0.050077  0.960061  
+4   -0.009568  0.992366  
+5    0.275894  0.782629  
+6           -         -  
+7  -30.979433       0.0  
+8   20.890596       0.0  
+9  -11.432134       0.0  
+10          -         -  
+11 -39.079904       0.0  
+12 -23.748779       0.0  
+13  10.770172       0.0  
+14   3.902734  0.000095  
+15  18.527017       0.0  
+16  14.903594       0.0  
+17  13.244559       0.0  
+18  17.307032       0.0  
+19          -         -  
+20   0.688176  0.491342  
+21   1.157072  0.247243  
+22   0.942235  0.346072  
+23  11.154446       0.0  
+24   1.309353  0.190415  
+25   7.562745       0.0  
+26  -1.521015  0.128256  
+27   -6.88927       0.0  
+28  -1.968601  0.048999  
+29    0.08531  0.932015  
+30   0.618514  0.536236  
+31    0.32059  0.748521  
+32  -1.181047  0.237584  
+33   0.629776  0.528841  
+34   1.439164  0.150104  
+35        0.0       1.0  
+36  11.154625       0.0  
+37   0.031921  0.974535  
+38   2.440067  0.014685  
+39  10.758796       0.0  
+40   9.991482       0.0  
+41  11.088865       0.0  
+42  11.142526       0.0  
+43  11.153605       0.0  
+44  10.227612       0.0  
+45  11.044868       0.0  
+46   0.452687  0.650774  
+47  10.995005       0.0  
+48        0.0       1.0  </pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<br>
+	<div class="accordion" id="accordion2">
+	<div class="accordion-item">
+	    <h2 class="accordion-header" id="headingTwo">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		Optimizer report
+	      </button>
+	    </h2>	
+	    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion2">
+	      <div class="accordion-body" style="background-color: #f6f8fa;max-width: 100%;width: 100%">
+		<pre style="font-family: monospace">Name of objective: MLW
+Optimization method: SLSQP
+Optimization successful.
+Optimization terminated successfully
+Objective value: 9.137
+Number of iterations: 324
+Params: 62.259 -48.206 -0.045 2.635 -0.480 2.711 -0.158 -0.228 -0.084 0.183 0.251 0.699 0.694 0.281 0.407 0.000 17982.908 173.015 41.088 221.913 534.818 52.757 38.565 -16.665 -78.186 -21.498 30.969 150.101 11.049 -6.799 192.855 284.601 63.924 476.489 1.550 2.577 9.934 2.547 26.534 4.297 1.637 175.750 15.003 0.000</pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<a class="anchor" id="indices"></a>
+	<h3>Fit indices</h3>
+	<table class="table"><thead><tr><th scope='col'>DoF</th><th scope='col'>DoF Baseline</th><th scope='col'>chi2</th><th scope='col'>chi2 p-value</th><th scope='col'>chi2 Baseline</th></tr></thead><tbody><tr><td>61.000</td><td>91.000</td><td>2284.133</td><td>0.000</td><td>6264.258</td></tr></tbody></table><table class="table"><thead><tr><th scope='col'>CFI</th><th scope='col'>GFI</th><th scope='col'>AGFI</th><th scope='col'>NFI</th><th scope='col'>TLI</th></tr></thead><tbody><tr><td>0.640</td><td>0.635</td><td>0.456</td><td>0.635</td><td>0.463</td></tr></tbody></table><table class="table"><thead><tr><th scope='col'>RMSEA</th><th scope='col'>AIC</th><th scope='col'>BIC</th><th scope='col'>LogLik</th></tr></thead><tbody><tr><td>0.383</td><td>69.727</td><td>224.671</td><td>9.137</td></tr></tbody></table>
+	<a class="anchor" id="matrices"></a>
+	<h3>Matrices</h3>
+ 	<center><h4>Covariance matrix</h4></center>
+<ul class="nav nav-tabs" id="cov" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="sample-tab" data-bs-toggle="tab" data-bs-target="#sample"
+type="button" role="tab" aria-controls="sample" aria-selected="true">Sample</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="modelimplied-tab" data-bs-toggle="tab" data-bs-target="#modelimplied"
+type="button" role="tab" aria-controls="modelimplied" aria-selected="false">Model-implied</button>
+</li></ul><div class="tab-content" id="covContent"><div class="tab-pane fade show active" id="sample" role="tabpanel" aria-labelledby="sample-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>cognitive</th>
+      <th>cognitive_load</th>
+      <th>initial_post</th>
+      <th>integrate_feedback</th>
+      <th>latent_cp1</th>
+      <th>latent_cp2</th>
+      <th>latent_sp1</th>
+      <th>latent_sp2</th>
+      <th>latent_tp1</th>
+      <th>latent_tp2</th>
+      <th>latent_tp3</th>
+      <th>replying_to_posts</th>
+      <th>social</th>
+      <th>teaching</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cognitive</th>
+      <td>582.08</td>
+      <td>-203.96</td>
+      <td>-14.81</td>
+      <td>-31.25</td>
+      <td>56.88</td>
+      <td>95.84</td>
+      <td>93.69</td>
+      <td>41.20</td>
+      <td>-44.24</td>
+      <td>101.38</td>
+      <td>41.32</td>
+      <td>-28.16</td>
+      <td>206.99</td>
+      <td>-431.35</td>
+    </tr>
+    <tr>
+      <th>cognitive_load</th>
+      <td>-203.96</td>
+      <td>35951.34</td>
+      <td>2211.81</td>
+      <td>4351.45</td>
+      <td>-40.48</td>
+      <td>-39.87</td>
+      <td>-90.44</td>
+      <td>55.06</td>
+      <td>-163.09</td>
+      <td>-67.08</td>
+      <td>-20.65</td>
+      <td>3421.60</td>
+      <td>-42.03</td>
+      <td>74.45</td>
+    </tr>
+    <tr>
+      <th>initial_post</th>
+      <td>-14.81</td>
+      <td>2211.81</td>
+      <td>153.09</td>
+      <td>247.75</td>
+      <td>-3.13</td>
+      <td>-1.61</td>
+      <td>-5.74</td>
+      <td>3.39</td>
+      <td>-12.04</td>
+      <td>-6.15</td>
+      <td>-1.70</td>
+      <td>198.23</td>
+      <td>-3.49</td>
+      <td>9.19</td>
+    </tr>
+    <tr>
+      <th>integrate_feedback</th>
+      <td>-31.25</td>
+      <td>4351.45</td>
+      <td>247.75</td>
+      <td>582.49</td>
+      <td>-5.15</td>
+      <td>-6.89</td>
+      <td>-13.91</td>
+      <td>5.98</td>
+      <td>-18.02</td>
+      <td>-7.98</td>
+      <td>-2.24</td>
+      <td>435.09</td>
+      <td>-8.89</td>
+      <td>9.60</td>
+    </tr>
+    <tr>
+      <th>latent_cp1</th>
+      <td>56.88</td>
+      <td>-40.48</td>
+      <td>-3.13</td>
+      <td>-5.15</td>
+      <td>7.83</td>
+      <td>10.23</td>
+      <td>9.53</td>
+      <td>4.00</td>
+      <td>-1.38</td>
+      <td>7.46</td>
+      <td>3.50</td>
+      <td>-4.96</td>
+      <td>18.82</td>
+      <td>-31.20</td>
+    </tr>
+    <tr>
+      <th>latent_cp2</th>
+      <td>95.84</td>
+      <td>-39.87</td>
+      <td>-1.61</td>
+      <td>-6.89</td>
+      <td>10.23</td>
+      <td>21.13</td>
+      <td>17.20</td>
+      <td>7.00</td>
+      <td>-2.03</td>
+      <td>12.03</td>
+      <td>5.49</td>
+      <td>-7.12</td>
+      <td>32.68</td>
+      <td>-49.66</td>
+    </tr>
+    <tr>
+      <th>latent_sp1</th>
+      <td>93.69</td>
+      <td>-90.44</td>
+      <td>-5.74</td>
+      <td>-13.91</td>
+      <td>9.53</td>
+      <td>17.20</td>
+      <td>28.26</td>
+      <td>8.21</td>
+      <td>-2.32</td>
+      <td>11.25</td>
+      <td>4.86</td>
+      <td>-13.67</td>
+      <td>44.19</td>
+      <td>-46.07</td>
+    </tr>
+    <tr>
+      <th>latent_sp2</th>
+      <td>41.20</td>
+      <td>55.06</td>
+      <td>3.39</td>
+      <td>5.98</td>
+      <td>4.00</td>
+      <td>7.00</td>
+      <td>8.21</td>
+      <td>5.56</td>
+      <td>-2.22</td>
+      <td>5.94</td>
+      <td>2.59</td>
+      <td>3.71</td>
+      <td>18.23</td>
+      <td>-25.39</td>
+    </tr>
+    <tr>
+      <th>latent_tp1</th>
+      <td>-44.24</td>
+      <td>-163.09</td>
+      <td>-12.04</td>
+      <td>-18.02</td>
+      <td>-1.38</td>
+      <td>-2.03</td>
+      <td>-2.32</td>
+      <td>-2.22</td>
+      <td>38.46</td>
+      <td>-8.37</td>
+      <td>-3.50</td>
+      <td>-14.01</td>
+      <td>-15.89</td>
+      <td>70.16</td>
+    </tr>
+    <tr>
+      <th>latent_tp2</th>
+      <td>101.38</td>
+      <td>-67.08</td>
+      <td>-6.15</td>
+      <td>-7.98</td>
+      <td>7.46</td>
+      <td>12.03</td>
+      <td>11.25</td>
+      <td>5.94</td>
+      <td>-8.37</td>
+      <td>29.49</td>
+      <td>8.61</td>
+      <td>-4.13</td>
+      <td>35.26</td>
+      <td>-110.42</td>
+    </tr>
+    <tr>
+      <th>latent_tp3</th>
+      <td>41.32</td>
+      <td>-20.65</td>
+      <td>-1.70</td>
+      <td>-2.24</td>
+      <td>3.50</td>
+      <td>5.49</td>
+      <td>4.86</td>
+      <td>2.59</td>
+      <td>-3.50</td>
+      <td>8.61</td>
+      <td>5.05</td>
+      <td>-1.30</td>
+      <td>14.14</td>
+      <td>-40.65</td>
+    </tr>
+    <tr>
+      <th>replying_to_posts</th>
+      <td>-28.16</td>
+      <td>3421.60</td>
+      <td>198.23</td>
+      <td>435.09</td>
+      <td>-4.96</td>
+      <td>-7.12</td>
+      <td>-13.67</td>
+      <td>3.71</td>
+      <td>-14.01</td>
+      <td>-4.13</td>
+      <td>-1.30</td>
+      <td>355.32</td>
+      <td>-9.71</td>
+      <td>0.71</td>
+    </tr>
+    <tr>
+      <th>social</th>
+      <td>206.99</td>
+      <td>-42.03</td>
+      <td>-3.49</td>
+      <td>-8.89</td>
+      <td>18.82</td>
+      <td>32.68</td>
+      <td>44.19</td>
+      <td>18.23</td>
+      <td>-15.89</td>
+      <td>35.26</td>
+      <td>14.14</td>
+      <td>-9.71</td>
+      <td>88.67</td>
+      <td>-149.86</td>
+    </tr>
+    <tr>
+      <th>teaching</th>
+      <td>-431.35</td>
+      <td>74.45</td>
+      <td>9.19</td>
+      <td>9.60</td>
+      <td>-31.20</td>
+      <td>-49.66</td>
+      <td>-46.07</td>
+      <td>-25.39</td>
+      <td>70.16</td>
+      <td>-110.42</td>
+      <td>-40.65</td>
+      <td>0.71</td>
+      <td>-149.86</td>
+      <td>484.05</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="modelimplied" role="tabpanel" aria-labelledby="modelimplied-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>cognitive</th>
+      <th>cognitive_load</th>
+      <th>initial_post</th>
+      <th>integrate_feedback</th>
+      <th>latent_cp1</th>
+      <th>latent_cp2</th>
+      <th>latent_sp1</th>
+      <th>latent_sp2</th>
+      <th>latent_tp1</th>
+      <th>latent_tp2</th>
+      <th>latent_tp3</th>
+      <th>replying_to_posts</th>
+      <th>social</th>
+      <th>teaching</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cognitive</th>
+      <td>610.56</td>
+      <td>-64.92</td>
+      <td>-34.02</td>
+      <td>-83.63</td>
+      <td>57.78</td>
+      <td>99.29</td>
+      <td>98.69</td>
+      <td>40.00</td>
+      <td>-50.15</td>
+      <td>106.96</td>
+      <td>39.38</td>
+      <td>-59.66</td>
+      <td>216.25</td>
+      <td>-468.90</td>
+    </tr>
+    <tr>
+      <th>cognitive_load</th>
+      <td>-64.92</td>
+      <td>18155.92</td>
+      <td>224.20</td>
+      <td>221.91</td>
+      <td>-6.78</td>
+      <td>-11.64</td>
+      <td>-11.57</td>
+      <td>-4.69</td>
+      <td>3.34</td>
+      <td>-9.37</td>
+      <td>-3.45</td>
+      <td>387.76</td>
+      <td>-23.16</td>
+      <td>41.09</td>
+    </tr>
+    <tr>
+      <th>initial_post</th>
+      <td>-34.02</td>
+      <td>224.20</td>
+      <td>153.51</td>
+      <td>289.34</td>
+      <td>-3.23</td>
+      <td>-5.56</td>
+      <td>-5.53</td>
+      <td>-2.24</td>
+      <td>2.75</td>
+      <td>-5.91</td>
+      <td>-2.18</td>
+      <td>198.67</td>
+      <td>-12.05</td>
+      <td>25.91</td>
+    </tr>
+    <tr>
+      <th>integrate_feedback</th>
+      <td>-83.63</td>
+      <td>221.91</td>
+      <td>289.34</td>
+      <td>761.09</td>
+      <td>-8.74</td>
+      <td>-15.02</td>
+      <td>-14.93</td>
+      <td>-6.05</td>
+      <td>4.26</td>
+      <td>-12.03</td>
+      <td>-4.43</td>
+      <td>498.22</td>
+      <td>-29.84</td>
+      <td>52.76</td>
+    </tr>
+    <tr>
+      <th>latent_cp1</th>
+      <td>57.78</td>
+      <td>-6.78</td>
+      <td>-3.23</td>
+      <td>-8.74</td>
+      <td>7.93</td>
+      <td>10.95</td>
+      <td>10.89</td>
+      <td>4.41</td>
+      <td>-1.88</td>
+      <td>7.25</td>
+      <td>2.67</td>
+      <td>-6.98</td>
+      <td>20.70</td>
+      <td>-31.79</td>
+    </tr>
+    <tr>
+      <th>latent_cp2</th>
+      <td>99.29</td>
+      <td>-11.64</td>
+      <td>-5.56</td>
+      <td>-15.02</td>
+      <td>10.95</td>
+      <td>21.40</td>
+      <td>18.71</td>
+      <td>7.58</td>
+      <td>-3.24</td>
+      <td>12.46</td>
+      <td>4.59</td>
+      <td>-12.00</td>
+      <td>35.58</td>
+      <td>-54.62</td>
+    </tr>
+    <tr>
+      <th>latent_sp1</th>
+      <td>98.69</td>
+      <td>-11.57</td>
+      <td>-5.53</td>
+      <td>-14.93</td>
+      <td>10.89</td>
+      <td>18.71</td>
+      <td>28.53</td>
+      <td>7.54</td>
+      <td>-3.22</td>
+      <td>12.39</td>
+      <td>4.56</td>
+      <td>-11.92</td>
+      <td>35.37</td>
+      <td>-54.30</td>
+    </tr>
+    <tr>
+      <th>latent_sp2</th>
+      <td>40.00</td>
+      <td>-4.69</td>
+      <td>-2.24</td>
+      <td>-6.05</td>
+      <td>4.41</td>
+      <td>7.58</td>
+      <td>7.54</td>
+      <td>5.60</td>
+      <td>-1.30</td>
+      <td>5.02</td>
+      <td>1.85</td>
+      <td>-4.83</td>
+      <td>14.33</td>
+      <td>-22.01</td>
+    </tr>
+    <tr>
+      <th>latent_tp1</th>
+      <td>-50.15</td>
+      <td>3.34</td>
+      <td>2.75</td>
+      <td>4.26</td>
+      <td>-1.88</td>
+      <td>-3.24</td>
+      <td>-3.22</td>
+      <td>-1.30</td>
+      <td>39.68</td>
+      <td>-17.85</td>
+      <td>-6.57</td>
+      <td>0.69</td>
+      <td>-17.00</td>
+      <td>78.23</td>
+    </tr>
+    <tr>
+      <th>latent_tp2</th>
+      <td>106.96</td>
+      <td>-9.37</td>
+      <td>-5.91</td>
+      <td>-12.03</td>
+      <td>7.25</td>
+      <td>12.46</td>
+      <td>12.39</td>
+      <td>5.02</td>
+      <td>-17.85</td>
+      <td>32.13</td>
+      <td>10.25</td>
+      <td>-6.22</td>
+      <td>37.12</td>
+      <td>-122.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp3</th>
+      <td>39.38</td>
+      <td>-3.45</td>
+      <td>-2.18</td>
+      <td>-4.43</td>
+      <td>2.67</td>
+      <td>4.59</td>
+      <td>4.56</td>
+      <td>1.85</td>
+      <td>-6.57</td>
+      <td>10.25</td>
+      <td>5.41</td>
+      <td>-2.29</td>
+      <td>13.67</td>
+      <td>-44.91</td>
+    </tr>
+    <tr>
+      <th>replying_to_posts</th>
+      <td>-59.66</td>
+      <td>387.76</td>
+      <td>198.67</td>
+      <td>498.22</td>
+      <td>-6.98</td>
+      <td>-12.00</td>
+      <td>-11.92</td>
+      <td>-4.83</td>
+      <td>0.69</td>
+      <td>-6.22</td>
+      <td>-2.29</td>
+      <td>355.78</td>
+      <td>-21.48</td>
+      <td>27.28</td>
+    </tr>
+    <tr>
+      <th>social</th>
+      <td>216.25</td>
+      <td>-23.16</td>
+      <td>-12.05</td>
+      <td>-29.84</td>
+      <td>20.70</td>
+      <td>35.58</td>
+      <td>35.37</td>
+      <td>14.33</td>
+      <td>-17.00</td>
+      <td>37.12</td>
+      <td>13.67</td>
+      <td>-21.48</td>
+      <td>91.66</td>
+      <td>-162.74</td>
+    </tr>
+    <tr>
+      <th>teaching</th>
+      <td>-468.90</td>
+      <td>41.09</td>
+      <td>25.91</td>
+      <td>52.76</td>
+      <td>-31.79</td>
+      <td>-54.62</td>
+      <td>-54.30</td>
+      <td>-22.01</td>
+      <td>78.23</td>
+      <td>-122.00</td>
+      <td>-44.91</td>
+      <td>27.28</td>
+      <td>-162.74</td>
+      <td>534.82</td>
+    </tr>
+  </tbody>
+</table></div></div><br><center><h4>Model matrices</h4></center><ul class="nav nav-tabs" id="modelmatrices" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="mxBeta-tab" data-bs-toggle="tab" data-bs-target="#mxBeta"
+type="button" role="tab" aria-controls="mxBeta" aria-selected="true">Beta</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="mxLambda-tab" data-bs-toggle="tab" data-bs-target="#mxLambda"
+type="button" role="tab" aria-controls="mxLambda" aria-selected="false">Lambda</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="mxPsi-tab" data-bs-toggle="tab" data-bs-target="#mxPsi"
+type="button" role="tab" aria-controls="mxPsi" aria-selected="false">Psi</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="mxTheta-tab" data-bs-toggle="tab" data-bs-target="#mxTheta"
+type="button" role="tab" aria-controls="mxTheta" aria-selected="false">Theta</button>
+</li></ul><div class="tab-content" id="covContent"><div class="tab-pane fade show active" id="mxBeta" role="tabpanel" aria-labelledby="mxBeta-tab"><ul class="nav nav-tabs" id="Betasub" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="BetaEstimates-tab" data-bs-toggle="tab" data-bs-target="#BetaEstimates"
+type="button" role="tab" aria-controls="BetaEstimates" aria-selected="true">Estimates</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="BetaStart-tab" data-bs-toggle="tab" data-bs-target="#BetaStart"
+type="button" role="tab" aria-controls="BetaStart" aria-selected="false">Start</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="BetaNames-tab" data-bs-toggle="tab" data-bs-target="#BetaNames"
+type="button" role="tab" aria-controls="BetaNames" aria-selected="false">Names</button>
+</li></ul><div class="tab-content" id="/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_SpecialsubContent"><div class="tab-pane fade show active" id="BetaEstimates" role="tabpanel" aria-labelledby="BetaEstimates-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>eta1</th>
+      <th>eta2</th>
+      <th>eta3</th>
+      <th>eta4</th>
+      <th>eta5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>eta1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta3</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta4</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta5</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="BetaStart" role="tabpanel" aria-labelledby="BetaStart-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>eta1</th>
+      <th>eta2</th>
+      <th>eta3</th>
+      <th>eta4</th>
+      <th>eta5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>eta1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta3</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta4</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta5</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="BetaNames" role="tabpanel" aria-labelledby="BetaNames-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>eta1</th>
+      <th>eta2</th>
+      <th>eta3</th>
+      <th>eta4</th>
+      <th>eta5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>eta1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta3</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta4</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta5</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div></div></div><div class="tab-pane fade " id="mxLambda" role="tabpanel" aria-labelledby="mxLambda-tab"><ul class="nav nav-tabs" id="Lambdasub" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="LambdaEstimates-tab" data-bs-toggle="tab" data-bs-target="#LambdaEstimates"
+type="button" role="tab" aria-controls="LambdaEstimates" aria-selected="true">Estimates</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="LambdaStart-tab" data-bs-toggle="tab" data-bs-target="#LambdaStart"
+type="button" role="tab" aria-controls="LambdaStart" aria-selected="false">Start</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="LambdaNames-tab" data-bs-toggle="tab" data-bs-target="#LambdaNames"
+type="button" role="tab" aria-controls="LambdaNames" aria-selected="false">Names</button>
+</li></ul><div class="tab-content" id="/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_SpecialsubContent"><div class="tab-pane fade show active" id="LambdaEstimates" role="tabpanel" aria-labelledby="LambdaEstimates-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>eta1</th>
+      <th>eta2</th>
+      <th>eta3</th>
+      <th>eta4</th>
+      <th>eta5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cognitive</th>
+      <td>0.00</td>
+      <td>-0.48</td>
+      <td>2.71</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>cognitive_load</th>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>initial_post</th>
+      <td>62.26</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>-48.21</td>
+    </tr>
+    <tr>
+      <th>integrate_feedback</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.41</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.70</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.69</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.28</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp1</th>
+      <td>0.00</td>
+      <td>0.18</td>
+      <td>0.25</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp2</th>
+      <td>0.00</td>
+      <td>-0.23</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp3</th>
+      <td>0.00</td>
+      <td>-0.08</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>replying_to_posts</th>
+      <td>-0.04</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>2.63</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>social</th>
+      <td>0.00</td>
+      <td>-0.16</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>teaching</th>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="LambdaStart" role="tabpanel" aria-labelledby="LambdaStart-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>eta1</th>
+      <th>eta2</th>
+      <th>eta3</th>
+      <th>eta4</th>
+      <th>eta5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cognitive</th>
+      <td>0.00</td>
+      <td>-0.90</td>
+      <td>2.35</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>cognitive_load</th>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>initial_post</th>
+      <td>0.06</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>0.43</td>
+    </tr>
+    <tr>
+      <th>integrate_feedback</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.21</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.37</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.50</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.21</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp1</th>
+      <td>0.00</td>
+      <td>0.15</td>
+      <td>-0.18</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp2</th>
+      <td>0.00</td>
+      <td>-0.23</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp3</th>
+      <td>0.00</td>
+      <td>-0.08</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>replying_to_posts</th>
+      <td>0.10</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.29</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>social</th>
+      <td>0.00</td>
+      <td>-0.31</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>teaching</th>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="LambdaNames" role="tabpanel" aria-labelledby="LambdaNames-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>eta1</th>
+      <th>eta2</th>
+      <th>eta3</th>
+      <th>eta4</th>
+      <th>eta5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cognitive</th>
+      <td>0.00</td>
+      <td>_b8</td>
+      <td>_b9</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>cognitive_load</th>
+      <td>_b1</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>initial_post</th>
+      <td>_b2</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_b3</td>
+      <td>_b4</td>
+    </tr>
+    <tr>
+      <th>integrate_feedback</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_b20</td>
+    </tr>
+    <tr>
+      <th>latent_cp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_b19</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_b16</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_b17</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_b18</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp1</th>
+      <td>0.00</td>
+      <td>_b14</td>
+      <td>_b15</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp2</th>
+      <td>0.00</td>
+      <td>_b12</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp3</th>
+      <td>0.00</td>
+      <td>_b13</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>replying_to_posts</th>
+      <td>_b5</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_b6</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>social</th>
+      <td>0.00</td>
+      <td>_b10</td>
+      <td>_b11</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>teaching</th>
+      <td>0.00</td>
+      <td>_b7</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div></div></div><div class="tab-pane fade " id="mxPsi" role="tabpanel" aria-labelledby="mxPsi-tab"><ul class="nav nav-tabs" id="Psisub" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="PsiEstimates-tab" data-bs-toggle="tab" data-bs-target="#PsiEstimates"
+type="button" role="tab" aria-controls="PsiEstimates" aria-selected="true">Estimates</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="PsiStart-tab" data-bs-toggle="tab" data-bs-target="#PsiStart"
+type="button" role="tab" aria-controls="PsiStart" aria-selected="false">Start</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="PsiNames-tab" data-bs-toggle="tab" data-bs-target="#PsiNames"
+type="button" role="tab" aria-controls="PsiNames" aria-selected="false">Names</button>
+</li></ul><div class="tab-content" id="/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_SpecialsubContent"><div class="tab-pane fade show active" id="PsiEstimates" role="tabpanel" aria-labelledby="PsiEstimates-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>eta1</th>
+      <th>eta2</th>
+      <th>eta3</th>
+      <th>eta4</th>
+      <th>eta5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>eta1</th>
+      <td>173.02</td>
+      <td>41.09</td>
+      <td>-16.66</td>
+      <td>150.10</td>
+      <td>221.91</td>
+    </tr>
+    <tr>
+      <th>eta2</th>
+      <td>41.09</td>
+      <td>534.82</td>
+      <td>-78.19</td>
+      <td>11.05</td>
+      <td>52.76</td>
+    </tr>
+    <tr>
+      <th>eta3</th>
+      <td>-16.66</td>
+      <td>-78.19</td>
+      <td>38.57</td>
+      <td>-6.80</td>
+      <td>-21.50</td>
+    </tr>
+    <tr>
+      <th>eta4</th>
+      <td>150.10</td>
+      <td>11.05</td>
+      <td>-6.80</td>
+      <td>30.97</td>
+      <td>192.86</td>
+    </tr>
+    <tr>
+      <th>eta5</th>
+      <td>221.91</td>
+      <td>52.76</td>
+      <td>-21.50</td>
+      <td>192.86</td>
+      <td>284.60</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="PsiStart" role="tabpanel" aria-labelledby="PsiStart-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>eta1</th>
+      <th>eta2</th>
+      <th>eta3</th>
+      <th>eta4</th>
+      <th>eta5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>eta1</th>
+      <td>0.05</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta2</th>
+      <td>0.00</td>
+      <td>0.05</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta3</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.05</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta4</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.05</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>eta5</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.05</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="PsiNames" role="tabpanel" aria-labelledby="PsiNames-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>eta1</th>
+      <th>eta2</th>
+      <th>eta3</th>
+      <th>eta4</th>
+      <th>eta5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>eta1</th>
+      <td>_c3</td>
+      <td>_c4</td>
+      <td>_c9</td>
+      <td>_c13</td>
+      <td>_c5</td>
+    </tr>
+    <tr>
+      <th>eta2</th>
+      <td>_c4</td>
+      <td>_c6</td>
+      <td>_c10</td>
+      <td>_c14</td>
+      <td>_c7</td>
+    </tr>
+    <tr>
+      <th>eta3</th>
+      <td>_c9</td>
+      <td>_c10</td>
+      <td>_c8</td>
+      <td>_c15</td>
+      <td>_c11</td>
+    </tr>
+    <tr>
+      <th>eta4</th>
+      <td>_c13</td>
+      <td>_c14</td>
+      <td>_c15</td>
+      <td>_c12</td>
+      <td>_c16</td>
+    </tr>
+    <tr>
+      <th>eta5</th>
+      <td>_c5</td>
+      <td>_c7</td>
+      <td>_c11</td>
+      <td>_c16</td>
+      <td>_c17</td>
+    </tr>
+  </tbody>
+</table></div></div></div><div class="tab-pane fade " id="mxTheta" role="tabpanel" aria-labelledby="mxTheta-tab"><ul class="nav nav-tabs" id="Thetasub" role="tablist"><li class="nav-item" role="presentation">
+<button class="nav-link active" id="ThetaEstimates-tab" data-bs-toggle="tab" data-bs-target="#ThetaEstimates"
+type="button" role="tab" aria-controls="ThetaEstimates" aria-selected="true">Estimates</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="ThetaStart-tab" data-bs-toggle="tab" data-bs-target="#ThetaStart"
+type="button" role="tab" aria-controls="ThetaStart" aria-selected="false">Start</button>
+</li><li class="nav-item" role="presentation">
+<button class="nav-link " id="ThetaNames-tab" data-bs-toggle="tab" data-bs-target="#ThetaNames"
+type="button" role="tab" aria-controls="ThetaNames" aria-selected="false">Names</button>
+</li></ul><div class="tab-content" id="/Users/darryl_chamberlain/Documents/git-repos/CoI_Python_Database_Analysis/Indirect_Measures/Analyze_Data/Reports/model_SpecialsubContent"><div class="tab-pane fade show active" id="ThetaEstimates" role="tabpanel" aria-labelledby="ThetaEstimates-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>cognitive</th>
+      <th>cognitive_load</th>
+      <th>initial_post</th>
+      <th>integrate_feedback</th>
+      <th>latent_cp1</th>
+      <th>latent_cp2</th>
+      <th>latent_sp1</th>
+      <th>latent_sp2</th>
+      <th>latent_tp1</th>
+      <th>latent_tp2</th>
+      <th>latent_tp3</th>
+      <th>replying_to_posts</th>
+      <th>social</th>
+      <th>teaching</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cognitive</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>cognitive_load</th>
+      <td>0.00</td>
+      <td>17982.91</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>initial_post</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>63.92</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>integrate_feedback</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>476.49</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.55</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>2.58</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>9.93</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>2.55</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>26.53</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>4.30</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp3</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.64</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>replying_to_posts</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>175.75</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>social</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>15.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>teaching</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="ThetaStart" role="tabpanel" aria-labelledby="ThetaStart-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>cognitive</th>
+      <th>cognitive_load</th>
+      <th>initial_post</th>
+      <th>integrate_feedback</th>
+      <th>latent_cp1</th>
+      <th>latent_cp2</th>
+      <th>latent_sp1</th>
+      <th>latent_sp2</th>
+      <th>latent_tp1</th>
+      <th>latent_tp2</th>
+      <th>latent_tp3</th>
+      <th>replying_to_posts</th>
+      <th>social</th>
+      <th>teaching</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cognitive</th>
+      <td>291.04</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>cognitive_load</th>
+      <td>0.00</td>
+      <td>17975.67</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>initial_post</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>76.54</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>integrate_feedback</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>291.24</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>3.92</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>10.56</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>14.13</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>2.78</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>19.23</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>14.74</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp3</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>2.53</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>replying_to_posts</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>177.66</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>social</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>44.33</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>teaching</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>242.03</td>
+    </tr>
+  </tbody>
+</table></div><div class="tab-pane fade " id="ThetaNames" role="tabpanel" aria-labelledby="ThetaNames-tab"><table border="1" class="dataframe table table-bordered">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>cognitive</th>
+      <th>cognitive_load</th>
+      <th>initial_post</th>
+      <th>integrate_feedback</th>
+      <th>latent_cp1</th>
+      <th>latent_cp2</th>
+      <th>latent_sp1</th>
+      <th>latent_sp2</th>
+      <th>latent_tp1</th>
+      <th>latent_tp2</th>
+      <th>latent_tp3</th>
+      <th>replying_to_posts</th>
+      <th>social</th>
+      <th>teaching</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cognitive</th>
+      <td>_c1</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>cognitive_load</th>
+      <td>0.00</td>
+      <td>_c2</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>initial_post</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c18</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>integrate_feedback</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c19</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c20</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_cp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c21</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c22</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_sp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c23</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c24</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp2</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c25</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>latent_tp3</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c26</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>replying_to_posts</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c27</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>social</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c28</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>teaching</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>_c29</td>
+    </tr>
+  </tbody>
+</table></div></div></div></div>
+    </div>
+   </div>
+  </div>
+</div>
+<footer class="footer">
+      <div class="container">
+	<br>
+	<center>
+        <span class="text-muted">Generated by <a href="https://semopy.com"><b>semopy</b></a> v. 2.3.11.</span>
+	</center>
+      </div>
+    </footer>
+</body>
+<script>
+const menus = [document.getElementById("model_m"), document.getElementById("estimates_m"), document.getElementById("indices_m"), document.getElementById("matrices_m")];
+const headers = [document.getElementById("model"), document.getElementById("estimates"), document.getElementById("indices"), document.getElementById("matrices")];
+var cur = menus[0];
+cur.classList.add('active');
+window.addEventListener("scroll", function() {
+  headers.forEach(function(item, index, array) {
+    if (window.scrollY >= (item.offsetTop - 1.05 * item.offsetHeight)) {
+        item = menus[index];
+        cur.classList.remove("active");
+        cur = item;
+        cur.classList.add("active");
+  }
+});
+});
+</script>
+
+</html>
